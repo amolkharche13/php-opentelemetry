@@ -1,0 +1,19 @@
+FROM php:8.3-cli
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    curl \
+    libcurl4-openssl-dev \
+    && docker-php-ext-install curl
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+COPY composer.json .
+RUN composer install
+
+COPY HelloWorld.php .
+
+CMD ["php", "HelloWorld.php"]
