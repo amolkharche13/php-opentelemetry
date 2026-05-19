@@ -28,8 +28,8 @@ docker build -t php-hello-demo -f Dockerfile.hello .
 
 ## Push Image to Docker Hub
 ```bash
-docker tag php-hello-demo:latest amolkhrche/php-hello-demo:latest
-docker push amolkhrche/php-hello-demo:latest
+docker tag php-hello-demo:latest USERNAME/php-hello-demo:latest
+docker push USERNAME/php-hello-demo:latest
 ```
 ## Deploy to Kubernetes
 ```bash
