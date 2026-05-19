@@ -8,7 +8,10 @@ The application continuously:
 - Generates traces every 5 seconds
 
 ---
-
+## Git clone 
+```
+git clone https://github.com/amolkharche13/php-opentelemetry.git
+```
 ## Repository Structure
 
 ```text
