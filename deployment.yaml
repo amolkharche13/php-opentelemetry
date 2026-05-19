@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: php-demo
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: php-demo
+
+  template:
+    metadata:
+      labels:
+        app: php-demo
+
+    spec:
+      containers:
+      - name: php-demo
+        image: amolkhrche/php-hello-demo:latest
+        imagePullPolicy: Always
